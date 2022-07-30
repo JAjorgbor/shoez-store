@@ -1,0 +1,301 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:wght@400;500;600&family=Rampart+One&family=Uchen&display=swap'); */
+
+header .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 82%;
+    margin: auto;
+    height: 100px;
+}
+
+.brand-logo h1 {
+    font-size: 3rem;
+    font-family: 'Rampart One', cursive;
+}
+
+
+/* hamburger button */
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 4;
+    /* animation-name: move_hamburger_left; */
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    cursor: pointer;
+    /* justify-self: center; */
+}
+
+@keyframes move_hamburger_left {
+    to {
+        background-color: inherit;
+    }
+}
+
+@keyframes move_hamburger_back {
+    to {
+        /* transform: translate(50px, 0); */
+        background-color: inherit;
+    }
+}
+
+.hamburger .bar {
+    width: 80%;
+    height: 8%;
+    background-color: black;
+    margin: auto;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.hamburger .bar:nth-of-type(1) {
+    /* animation-name: open0; */
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+    /* background-color: var(--text-color); */
+}
+
+@keyframes open0 {
+    from {
+        transform: rotate(0deg);
+        background-color: black;
+    }
+    to {
+        transform: rotate(45deg) translate(20%, -20%);
+        width: 100%;
+        top: 20%;
+        left: -15%;
+        background-color: white;
+    }
+}
+
+@keyframes closed0 {
+    from {
+        transform: rotate(45deg) translate(20%, -20%);
+        width: 100%;
+        top: 15%;
+        left: -15%;
+        background-color: white;
+    }
+    to {
+        background-color: black;
+        transform: rotate(0deg);
+    }
+}
+
+.hamburger .bar:nth-of-type(2) {
+    /* animation-name: open1; */
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes open1 {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+        background: transparent;
+    }
+}
+
+@keyframes closed1 {
+    from {
+        right: 100%;
+        background: transparent;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.hamburger .bar:nth-of-type(3) {
+    margin: auto;
+    border-radius: 20px;
+    position: relative;
+    /* animation-name: open2; */
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes open2 {
+    from {
+        transform: rotate(0deg);
+        background-color: black;
+    }
+    to {
+        transform: rotate(-45deg) translate(25%, -25%);
+        width: 100%;
+        bottom: 15%;
+        right: 15%;
+        background-color: white;
+    }
+}
+
+@keyframes closed2 {
+    from {
+        transform: rotate(-45deg) translate(25%, -25%);
+        width: 100%;
+        bottom: 15%;
+        background-color: white;
+    }
+    to {
+        transform: rotate(0deg) translate(0, 0);
+        background-color: black;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .hamburger {
+        visibility: visible;
+        transform: translate(100%, 0);
+    }
+}
+
+
+/* navbar */
+
+nav {
+    height: 50px;
+    width: 100%;
+    font-family: 'Cormorant SC', serif;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    z-index: 2;
+}
+
+.nav_container ul {
+    align-items: start;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    justify-self: start;
+    width: 50%;
+}
+
+.cart-icon i {
+    color: black;
+    font-size: x-large;
+    font-weight: 900;
+    justify-self: end;
+}
+
+.easter-egg {
+    font-size: 0.8rem;
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+    .easter-egg {
+        display: block;
+    }
+    nav {
+        height: 0%;
+    }
+    .nav_container {
+        height: 100%;
+        visibility: hidden;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* align-items: start; */
+        position: fixed;
+        top: 0;
+        right: -50%;
+        background-color: black;
+        height: 100%;
+        width: 110%;
+        /* animation-name: pop-in; */
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        display: none;
+        z-index: 3;
+    }
+    .nav_container ul {
+        margin-top: 50px;
+        padding-top: 0;
+        flex-direction: column;
+        width: 100%;
+        /* background: blue; */
+    }
+    .item {
+        text-align: center;
+        color: white;
+    }
+    .cart-icon i {
+        color: white;
+        font-size: x-large;
+        font-weight: 900;
+        /* text-align: center; */
+        /* justify-self: end; */
+    }
+    @keyframes pop-out {
+        from {
+            visibility: hidden;
+            right: -110%;
+        }
+        to {
+            visibility: visible;
+            left: -55%;
+        }
+    }
+    @keyframes pop-in {
+        from {
+            visibility: hidden;
+            left: -55%;
+        }
+        to {
+            visibility: visible;
+            right: -110%;
+        }
+    }
+}
+
+.item {
+    padding: 0;
+    /* margin: 0 auto; */
+    padding: 5%;
+    /* color: black; */
+    width: 100%;
+    /* transition: 2s; */
+}
+
+
+/* .item:hover {
+    background: white;
+    color: black;
+
+
+}
+*/
+
+.item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: rgb(94, 74, 11);
+}
+
+.cart-icon i:hover {
+    color: rgb(94, 74, 11);
+}
