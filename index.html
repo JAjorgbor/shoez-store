@@ -32,16 +32,20 @@
     </header>
     <!-- navbar-start -->
     <nav>
+        <div class="color-back"></div>
         <div class="nav_container">
-            <ul>
-                <li class="item active-link"><a href="#">Home</a> </li>
-                <li class="item"><a href="./men.html">Men </a> </li>
-                <li class="item"><a href="#">Women </a> </li>
-                <li class="item"><a href="#">About</a> </li>
-                <li class="item"><a href="#">Contact</a></li>
 
-            </ul>
-            <div class="cart-icon"><a href="#"><i class="bi bi-cart3"></i></a></div>
+            <div class="link-container">
+                <ul>
+                    <li class="item active-link"><a href="#">Home</a> </li>
+                    <li class="item"><a href="./men.html">Men </a> </li>
+                    <li class="item"><a href="./women.html">Women </a> </li>
+                    <li class="item"><a href="./about.html">About</a> </li>
+                    <li class="item"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="cart-icon"><a href="./cart.html"><i class="bi bi-cart3"></i></a></div>
             <p class="easter-egg ">What's Up Danger !?</p>
 
         </div>
@@ -51,21 +55,32 @@
     <!-- start of main body-->
     <main>
         <!-- offer slide animation start -->
-        <div class="cont">
-            <p class="par-1">Prices are 50% off this Summer</p>
-            <p class="par-2">Use promo code "Danger" to enjoy our best deals</p>
+        <div id="carouselExampleCaptions" class="cont carousel slide carousel-fade" data-bs-ride="true">
+
+            <div class=" contain carousel-inner">
+                <div class="par carousel-item active" data-bs-interval="7000">
+
+                    <p class="lead">Prices are 50% off this Summer</p>
+                </div>
+                <div class="par carousel-item" data-bs-interval="7000">
+
+                    <p class="lead">Use promo code "Danger" to enjoy our best deals</p>
+
+                </div>
+            </div>
+
         </div>
         <!-- offer slide animation end -->
         <!-- carousel start -->
-        <div id="carouselExampleCaptions" class="carousel carousel-dark slide carousel-fade" data-bs-ride="true">
+        <div id="introSlides" class="carousel carousel-dark slide carousel-fade " data-bs-ride="true">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#introSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#introSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#introSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="8000">
-                    <img src="./images/slide1.jpg" class="d-block w-100" alt="...">
+                    <img src="./images/slide1.jpg" class="d-block " alt="...">
                     <div class="carousel-caption">
                         <h5 class="slide-caption_heading">NEW</h5>
                         <p class="display-6"> ARRIVALS</p>
@@ -74,7 +89,7 @@
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="8000">
-                    <img src="./images/slide2.jpg" class="d-block w-100" alt="...">
+                    <img src="./images/slide2.jpg" class="d-block " alt="...">
                     <div class="carousel-caption ">
                         <h5 class="slide-caption_heading">DRESS</h5>
                         <p class="display-6"> SHOES</p>
@@ -83,7 +98,7 @@
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="8000">
-                    <img src="./images/slide3.jpg" class="d-block w-100" alt="...">
+                    <img src="./images/slide3.jpg" class="d-block " alt="...">
                     <div class="carousel-caption ">
                         <h5 class="slide-caption_heading">MEN </h5>
                         <p class="display-6"> SHOES COLLECTION</p>
@@ -93,15 +108,20 @@
                 </div>
             </div>
 
+
         </div>
+
         <!-- carousel end -->
+        <!-- // -->
+
+        <!-- // -->
         <p class="intro-text">It started with a <strong>simple idea</strong>: "Create quality, well-designed products that I wanted myself".</p>
         <!-- image links start -->
         <section>
             <div class="container-fluid">
                 <div class="image-link-gen-cont">
                     <div class="image-link-cont-1">
-                        <a href="#"><img src="./images/image-link1.jpg" class="" alt="...">
+                        <a href="./men.html"><img src="./images/image-link1.jpg" class="" alt="...">
                         </a>
                         <div class="image-link-text-container">
                             <P class="image-link-caption h4 fw-bold">SHOP MEN'S COLLECTION</P>
@@ -109,7 +129,7 @@
                         </div>
                     </div>
                     <div class="image-link-cont-2">
-                        <a href="#"><img src="./images/image-link2.jpg" class="" alt="...">
+                        <a href="./women.html"><img src="./images/image-link2.jpg" class="" alt="...">
                         </a>
                         <div class="image-link-text-container">
                             <P class="image-link-caption h4 fs-sm fw-bold">SHOP WOMEN'S COLLECTION</P>
@@ -127,14 +147,14 @@
             <div class="items-container">
 
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-1.jpg" class="w-100" alt="">
                         <p class="item-description lead">Women's Boots Shoes
                             <strong>$139.00</strong> </p>
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-2.jpg" class="w-100" alt="">
                         <p class="item-description lead">Women's Minam Meaghan
                             <strong>$139.00</strong>
@@ -142,7 +162,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./men-product-details.html">
                         <img src="./images/item-3.jpg" class="w-100" alt="">
                         <p class="item-description lead">Men's Taja Commissioner
                             <strong>$139.00</strong>
@@ -150,7 +170,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./men-product-details.html">
                         <img src="./images/item-4.jpg" class="w-100" alt="">
                         <p class="item-description lead">Russ Men's Sneakers
                             <strong>$139.00</strong>
@@ -158,7 +178,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-5.jpg" class="w-100" alt="">
                         <p class="item-description lead">Women's Fancy Heals
                             <strong>$139.00</strong>
@@ -166,7 +186,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-6.jpg" class="w-100" alt="">
                         <p class="item-description lead">Women's Running Shoes
                             <strong>$139.00</strong>
@@ -174,7 +194,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./men-product-details.html">
                         <img src="./images/item-7.jpg" class="w-100" alt="">
                         <p class="item-description lead">Men's Suade Shoes
                             <strong>$139.00</strong>
@@ -182,7 +202,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-8.jpg" class="w-100" alt="">
                         <p class="item-description lead">Women's Suade Shoes
                             <strong>$139.00</strong>
@@ -190,7 +210,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./men-product-details.html">
                         <img src="./images/item-9.jpg" class="w-100" alt="">
                         <p class="item-description lead">Men's Hiking Shoes
                             <strong>$139.00</strong>
@@ -198,7 +218,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-10.jpg" class="w-100" alt="">
                         <p class="item-description lead">Womens's Fancy Heels
                             <strong>$139.00</strong>
@@ -206,7 +226,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-11.jpg" class="w-100" alt="">
                         <p class="item-description lead">Women's Nike Air Jordan
                             <strong>$250.00</strong>
@@ -214,7 +234,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-12.jpg" class="w-100" alt="">
                         <p class="item-description lead">Women's Running Shoe
                             <strong>$139.00</strong>
@@ -222,7 +242,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./men-product-details.html">
                         <img src="./images/item-13.jpg" class="w-100" alt="">
                         <p class="item-description lead">Nike Air Jordan Sneakers
                             <strong>$250.00</strong>
@@ -230,7 +250,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./women-product-details.html">
                         <img src="./images/item-14.jpg" class="w-100" alt="">
                         <p class="item-description lead">Running Shoe
                             <strong>$139.00</strong>
@@ -238,7 +258,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./men-product-details.html">
                         <img src="./images/item-15.jpg" class="w-100" alt="">
                         <p class="item-description lead">Brown Air Shoes
                             <strong>$139.00</strong>
@@ -246,7 +266,7 @@
                     </a>
                 </div>
                 <div class="item-for-sale item1">
-                    <a class="item" href="#">
+                    <a class="item" href="./men-product-details.html">
                         <img src="./images/item-16.jpg" class="w-100" alt="">
                         <p class="item-description lead">Van's Skateboard Sneakers
                             <strong>$139.00</strong>
@@ -278,7 +298,7 @@
 
 
         <!-- back to top button -->
-        <a href="#"><i class=" back-to-top btt-button bi bi-arrow-up-square-fill display-4"></i></a>
+        <a href="#"><i class=" back-to-top btt-button bi bi-arrow-up-square-fill "></i></a>
         <!-- end of back to top button -->
     </main>
     <!-- footer beginning -->

@@ -42,7 +42,6 @@ header .header_container {
 
 @keyframes move_hamburger_back {
     to {
-        /* transform: translate(50px, 0); */
         background-color: inherit;
     }
 }
@@ -58,7 +57,7 @@ header .header_container {
 
 .hamburger .bar:nth-of-type(1) {
     /* animation-name: open0; */
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     position: relative;
     /* background-color: var(--text-color); */
@@ -94,7 +93,7 @@ header .header_container {
 
 .hamburger .bar:nth-of-type(2) {
     /* animation-name: open1; */
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     position: relative;
 }
@@ -124,7 +123,7 @@ header .header_container {
     border-radius: 20px;
     position: relative;
     /* animation-name: open2; */
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-fill-mode: both;
 }
 
@@ -174,78 +173,101 @@ nav {
 .nav_container {
     display: flex;
     justify-content: space-between;
-    align-items: center !important;
+    /* align-items: center; */
     height: 100%;
-    width: 90%;
+    width: 88%;
     margin: auto;
     z-index: 2;
 }
 
-.nav_container ul {
-    align-items: start;
+.color-back {
+    display: none;
+}
+
+.link-container ul {
+    align-items: center;
     display: flex;
     list-style-type: none;
     justify-content: space-between;
     justify-self: start;
-    width: 50%;
+    width: 100%;
 }
 
-.cart-icon i {
+.cart-icon a i {
     color: black;
     font-size: x-large;
     font-weight: 900;
-    justify-self: end;
+    /* justify-self: end; */
+    text-align: center;
+    width: 100%;
 }
 
 .easter-egg {
-    font-size: 0.8rem;
+    font-size: 1rem;
     display: none;
+    text-align: center;
 }
 
 @media screen and (max-width:800px) {
+    .color-back {
+        z-index: 3;
+        position: fixed;
+        top: 0%;
+        right: 0%;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0, 0.5);
+    }
     .easter-egg {
         display: block;
     }
     nav {
         height: 0%;
+        position: relative;
     }
     .nav_container {
         height: 100%;
         visibility: hidden;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        /* align-items: start; */
         position: fixed;
         top: 0;
         right: -50%;
         background-color: black;
+        padding: 0;
         height: 100%;
-        width: 110%;
+        width: 50%;
         /* animation-name: pop-in; */
-        animation-duration: 1s;
+        animation-duration: 0.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
         display: none;
         z-index: 3;
     }
-    .nav_container ul {
-        margin-top: 50px;
+    .link-container ul {
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 80px;
         padding-top: 0;
         flex-direction: column;
+        height: 80%;
         width: 100%;
-        /* background: blue; */
     }
     .item {
-        text-align: center;
+        /* text-align: center; */
         color: white;
+        border-bottom: 1px solid rgba(51, 49, 49, 0.5);
+        ;
     }
-    .cart-icon i {
+    .cart-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-icon a i {
         color: white;
         font-size: x-large;
         font-weight: 900;
-        /* text-align: center; */
-        /* justify-self: end; */
     }
     @keyframes pop-out {
         from {
@@ -254,13 +276,13 @@ nav {
         }
         to {
             visibility: visible;
-            left: -55%;
+            left: 0;
         }
     }
     @keyframes pop-in {
         from {
             visibility: hidden;
-            left: -55%;
+            left: 0;
         }
         to {
             visibility: visible;

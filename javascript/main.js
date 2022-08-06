@@ -19,7 +19,8 @@ function hamburgerTransition(e) {
         document.querySelector(".nav_container").style.display = "flex";
         document.querySelector(".nav_container").style.animationName = "pop-out";
 
-        console.log("what's up");
+        document.querySelector(".color-back").style.display = "block";
+        
         // menue_bar.addEventListener("click", myFunc2);
         isPushed = true;
 
@@ -34,13 +35,24 @@ function hamburgerTransition(e) {
         bar[2].style.animationName = "closed2";
         // document.querySelector(".nav_container").style.display = "none";
         document.querySelector(".nav_container").style.animationName = "pop-in";
-        console.log("hello");
+        document.querySelector(".color-back").style.display = "none";
 
+        
 
         isPushed = false;
     }
+
 }
-// back to top scroll animation
+// trasnparent background for nav menue in small screens
+document.querySelector(".color-back").addEventListener("click", function(e) {
+        menue_bar.style.animationName = "move_hamburger_back";
+        bar[0].style.animationName = "closed0";
+        bar[1].style.animationName = "closed1";
+        bar[2].style.animationName = "closed2";
+        document.querySelector(".nav_container").style.animationName = "pop-in";
+        e.target.style.display = "none";
+    }, true)
+    // back to top scroll animation
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
@@ -54,29 +66,28 @@ function scrollFunction() {
 
     }
 }
-// image link text animation
-// for image link caption 1
-document.querySelector(`.image-link-cont-1 a img`).addEventListener("mouseover", function() {
 
-    document.querySelectorAll(".image-link-text-container")[0].style.animationName = "link-image-text-slide-up";
 
-}, true);
-document.querySelector(".image-link-cont-1 a img").addEventListener("mouseout", function() {
-    document.querySelector(".image-link-cont-1 .image-link-text-container").style.animationName = "link-image-text-slide-down";
-});
-// for image link caption 2
-document.querySelector(`.image-link-cont-2 a img `).addEventListener("mouseover", function() {
 
-    document.querySelectorAll(".image-link-text-container")[1].style.animationName = "link-image-text-slide-up";
 
-});
-document.querySelector(".image-link-cont-2 a img").addEventListener("mouseout", function() {
-    document.querySelector(".image-link-cont-2 .image-link-text-container").style.animationName = "link-image-text-slide-down";
-});
+
 // final text in footer
 document.querySelector(".final-text span").innerHTML = ` ${new Date().getFullYear()} `;
+// let minusBtn = document.querySelector(".minus-btn");
+// let plusBtn = document.querySelector(".plus-btn ");
+// let numMaker = document.querySelector(".number-base ");
 
-// men collection page 
-document.querySelector(".men-image-link-cont-1").addEventListener("mousein", function() {
-    document.querySelector(".image-link-button").style.animationName = "button-slide-up";
-})
+
+// minusBtn.addEventListener("click ", function() {
+//     let num = parseInt(numMaker.value);
+//     if (num > 0) {
+//         numMaker.value = num - 1;
+//     }
+// })
+// plusBtn.addEventListener("click ", function() {
+//     let num = parseInt(numMaker.value);
+//     console.log("testing");
+
+//     numMaker.value = num + 1;
+
+// })
