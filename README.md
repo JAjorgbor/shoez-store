@@ -18,7 +18,7 @@
 
 
 ## Overview
-This is a modification of a free shoe ecomerce website that I found online, I recreated majority of the original ui with basic css and javascript as a way of challenging my genral ui skills, it was built with html css javascript and a little bit of Bootstrap
+This is a modification of a free shoe ecomerce website that I found online, I recreated majority of the original ui with basic CSS and Javascript as a way of challenging my genral ui skills, it was built with HTML, CSS, Javascript and Bootstrap
 ### The challenge
 
 Users should be able to:
@@ -35,7 +35,7 @@ Users should be able to:
 - Live Site URL: [cick here to see the live site](https://JAjorgbor.github.io/shoez-store/)
 
 ## My process
-I built the layout with html css and bootstrap with consideration for genral breakpoints to make the website responsive, I then used javascript dom manipulation to make the website more interactive particularly uin the navigation hamburger menue
+I built the layout with HTML CSS and bootstrap with consideration for genral breakpoints to make the website responsive, I then used Javascript dom manipulation to make the website more interactive particularly uin the navigation hamburger menue
 
 ### Built with
 
@@ -47,7 +47,7 @@ I built the layout with html css and bootstrap with consideration for genral bre
 - Vanilla Javascript 
 
 ### What I learned
-I learnt how to use javascript even lsiteners to create effects for click events
+I learnt how to use Javascript even lsiteners to create effects for click events
 ```js
 menue_bar.addEventListener("click", hamburgerTransition);
 
@@ -95,7 +95,7 @@ function hamburgerTransition(e) {
 
 ### Continued development
 
-I would like to learn how to better use event listeners to make my futrure websites more interactive in an efficient manner without needing to trigger animations with the @keyframes syntac in css
+I would like to learn how to better use event listeners to make my futrure websites more interactive in an efficient manner without needing to trigger animations with the @keyframes syntac in CSS
 ## Author
 - Twitter - [@yourusername](https://www.twitter.com/jAjorgbor)
 - LinkedIn - [my LinkedIn](https://www.linkedin.com/in/joshua-ajorgbor-b0bba6227/)

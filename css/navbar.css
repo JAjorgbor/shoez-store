@@ -1,305 +1,299 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:wght@400;500;600&family=Rampart+One&family=Uchen&display=swap'); */
-
 header .header_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 82%;
-    margin: auto;
-    height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  margin: auto;
+  height: 100px;
 }
 
 .brand-logo h1 {
-    font-size: 3rem;
-    font-family: 'Rampart One', cursive;
+  font-size: 3rem;
+  font-family: "Rampart One", cursive;
 }
-
 
 /* hamburger button */
 
 .hamburger {
-    width: 30px;
-    height: 30px;
-    background-color: inherit;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 4;
-    /* animation-name: move_hamburger_left; */
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    visibility: hidden;
-    cursor: pointer;
-    /* justify-self: center; */
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 4;
+  /* animation-name: move_hamburger_left; */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  cursor: pointer;
+  /* justify-self: center; */
 }
 
 @keyframes move_hamburger_left {
-    to {
-        background-color: inherit;
-    }
+  to {
+    background-color: inherit;
+  }
 }
 
 @keyframes move_hamburger_back {
-    to {
-        background-color: inherit;
-    }
+  to {
+    background-color: inherit;
+  }
 }
 
 .hamburger .bar {
-    width: 80%;
-    height: 8%;
-    background-color: black;
-    margin: auto;
-    border-radius: 20px;
-    transition: 0.5s;
+  width: 80%;
+  height: 8%;
+  background-color: black;
+  margin: auto;
+  border-radius: 20px;
+  transition: 0.5s;
 }
 
 .hamburger .bar:nth-of-type(1) {
-    /* animation-name: open0; */
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    position: relative;
-    /* background-color: var(--text-color); */
+  /* animation-name: open0; */
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  /* background-color: var(--text-color); */
 }
 
 @keyframes open0 {
-    from {
-        transform: rotate(0deg);
-        background-color: black;
-    }
-    to {
-        transform: rotate(45deg) translate(20%, -20%);
-        width: 100%;
-        top: 20%;
-        left: -15%;
-        background-color: white;
-    }
+  from {
+    transform: rotate(0deg);
+    background-color: black;
+  }
+  to {
+    transform: rotate(45deg) translate(20%, -20%);
+    width: 100%;
+    top: 20%;
+    left: -15%;
+    background-color: white;
+  }
 }
 
 @keyframes closed0 {
-    from {
-        transform: rotate(45deg) translate(20%, -20%);
-        width: 100%;
-        top: 15%;
-        left: -15%;
-        background-color: white;
-    }
-    to {
-        background-color: black;
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(45deg) translate(20%, -20%);
+    width: 100%;
+    top: 15%;
+    left: -15%;
+    background-color: white;
+  }
+  to {
+    background-color: black;
+    transform: rotate(0deg);
+  }
 }
 
 .hamburger .bar:nth-of-type(2) {
-    /* animation-name: open1; */
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    position: relative;
+  /* animation-name: open1; */
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  position: relative;
 }
 
 @keyframes open1 {
-    from {
-        right: 0;
-    }
-    to {
-        right: 100%;
-        background: transparent;
-    }
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+    background: transparent;
+  }
 }
 
 @keyframes closed1 {
-    from {
-        right: 100%;
-        background: transparent;
-    }
-    to {
-        right: 0;
-    }
+  from {
+    right: 100%;
+    background: transparent;
+  }
+  to {
+    right: 0;
+  }
 }
 
 .hamburger .bar:nth-of-type(3) {
-    margin: auto;
-    border-radius: 20px;
-    position: relative;
-    /* animation-name: open2; */
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  /* animation-name: open2; */
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 
 @keyframes open2 {
-    from {
-        transform: rotate(0deg);
-        background-color: black;
-    }
-    to {
-        transform: rotate(-45deg) translate(25%, -25%);
-        width: 100%;
-        bottom: 15%;
-        right: 15%;
-        background-color: white;
-    }
+  from {
+    transform: rotate(0deg);
+    background-color: black;
+  }
+  to {
+    transform: rotate(-45deg) translate(25%, -25%);
+    width: 100%;
+    bottom: 15%;
+    right: 15%;
+    background-color: white;
+  }
 }
 
 @keyframes closed2 {
-    from {
-        transform: rotate(-45deg) translate(25%, -25%);
-        width: 100%;
-        bottom: 15%;
-        background-color: white;
-    }
-    to {
-        transform: rotate(0deg) translate(0, 0);
-        background-color: black;
-    }
+  from {
+    transform: rotate(-45deg) translate(25%, -25%);
+    width: 100%;
+    bottom: 15%;
+    background-color: white;
+  }
+  to {
+    transform: rotate(0deg) translate(0, 0);
+    background-color: black;
+  }
 }
 
-@media screen and (max-width:800px) {
-    .hamburger {
-        visibility: visible;
-        transform: translate(100%, 0);
-    }
+@media screen and (max-width: 800px) {
+  .hamburger {
+    visibility: visible;
+    transform: translate(100%, 0);
+  }
 }
-
 
 /* navbar */
 
 nav {
-    height: 50px;
-    width: 100%;
-    font-family: 'Cormorant SC', serif;
+  height: 50px;
+  width: 100%;
+  font-family: "Cormorant SC", serif;
 }
 
 .nav_container {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    height: 100%;
-    width: 88%;
-    margin: auto;
-    z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 100%;
+  width: 88%;
+  margin: auto;
+  z-index: 2;
 }
 
 .color-back {
-    display: none;
+  display: none;
 }
 
 .link-container ul {
-    align-items: center;
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    justify-self: start;
-    width: 100%;
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  justify-self: start;
+  width: 100%;
 }
 
 .cart-icon a i {
-    color: black;
-    font-size: x-large;
-    font-weight: 900;
-    /* justify-self: end; */
-    text-align: center;
-    width: 100%;
+  color: black;
+  font-size: x-large;
+  font-weight: 900;
+  /* justify-self: end; */
+  text-align: center;
+  width: 100%;
 }
 
 .easter-egg {
-    font-size: 1rem;
-    display: none;
-    text-align: center;
+  font-size: 1rem;
+  display: none;
+  text-align: center;
 }
 
-@media screen and (max-width:800px) {
-    .color-back {
-        z-index: 3;
-        position: fixed;
-        top: 0%;
-        right: 0%;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgb(0, 0, 0, 0.5);
+@media screen and (max-width: 800px) {
+  .color-back {
+    z-index: 3;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+  }
+  .easter-egg {
+    display: block;
+  }
+  nav {
+    height: 0%;
+    position: relative;
+  }
+  .nav_container {
+    height: 100%;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    background-color: black;
+    padding: 0;
+    height: 100%;
+    width: 50%;
+    /* animation-name: pop-in; */
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    display: none;
+    z-index: 3;
+  }
+  .link-container ul {
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 80px;
+    padding-top: 0;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+  }
+  .item {
+    /* text-align: center; */
+    color: white;
+    border-bottom: 1px solid rgba(51, 49, 49, 0.5);
+  }
+  .cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cart-icon a i {
+    color: white;
+    font-size: x-large;
+    font-weight: 900;
+  }
+  @keyframes pop-out {
+    from {
+      visibility: hidden;
+      right: -110%;
     }
-    .easter-egg {
-        display: block;
+    to {
+      visibility: visible;
+      left: 0;
     }
-    nav {
-        height: 0%;
-        position: relative;
+  }
+  @keyframes pop-in {
+    from {
+      visibility: hidden;
+      left: 0;
     }
-    .nav_container {
-        height: 100%;
-        visibility: hidden;
-        flex-direction: column;
-        justify-content: space-between;
-        position: fixed;
-        top: 0;
-        right: -50%;
-        background-color: black;
-        padding: 0;
-        height: 100%;
-        width: 50%;
-        /* animation-name: pop-in; */
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-        display: none;
-        z-index: 3;
+    to {
+      visibility: visible;
+      right: -110%;
     }
-    .link-container ul {
-        justify-content: space-between;
-        align-items: start;
-        margin-top: 80px;
-        padding-top: 0;
-        flex-direction: column;
-        height: 80%;
-        width: 100%;
-    }
-    .item {
-        /* text-align: center; */
-        color: white;
-        border-bottom: 1px solid rgba(51, 49, 49, 0.5);
-        ;
-    }
-    .cart-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .cart-icon a i {
-        color: white;
-        font-size: x-large;
-        font-weight: 900;
-    }
-    @keyframes pop-out {
-        from {
-            visibility: hidden;
-            right: -110%;
-        }
-        to {
-            visibility: visible;
-            left: 0;
-        }
-    }
-    @keyframes pop-in {
-        from {
-            visibility: hidden;
-            left: 0;
-        }
-        to {
-            visibility: visible;
-            right: -110%;
-        }
-    }
+  }
 }
 
 .item {
-    padding: 0;
-    /* margin: 0 auto; */
-    padding: 5%;
-    /* color: black; */
-    width: 100%;
-    /* transition: 2s; */
+  padding: 0;
+  /* margin: 0 auto; */
+  padding: 5%;
+  /* color: black; */
+  width: 100%;
+  /* transition: 2s; */
 }
-
 
 /* .item:hover {
     background: white;
@@ -310,14 +304,14 @@ nav {
 */
 
 .item a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .item a:hover {
-    color: rgb(94, 74, 11);
+  color: rgb(94, 74, 11);
 }
 
 .cart-icon i:hover {
-    color: rgb(94, 74, 11);
+  color: rgb(94, 74, 11);
 }
