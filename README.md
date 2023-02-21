@@ -32,7 +32,7 @@ Users should be able to:
 ![](./fullPageScreenshot.png)
 
 ### Links
-- Live Site URL: [cick here to see the live site](https://joshuaaj003.github.io/shoez-store/)
+- Live Site URL: [cick here to see the live site](https://JAjorgbor.github.io/shoez-store/)
 
 ## My process
 I built the layout with html css and bootstrap with consideration for genral breakpoints to make the website responsive, I then used javascript dom manipulation to make the website more interactive particularly uin the navigation hamburger menue
